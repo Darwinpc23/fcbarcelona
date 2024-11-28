@@ -1,0 +1,266 @@
+:root {
+    --blanco: #ffffff;
+    --negro: #212121;
+    --principal: #a50044;
+    --secundario:#004d98;
+    --terciario: #edbb00;
+
+}
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: "Krub", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  background-image: linear-gradient(to top, #DFE9F3 0%, var(--blanco) 100%);
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+main {
+  display: flex;
+  flex-direction: column; /* Mantiene los elementos en vertical */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  min-height: 100vh; /* Hace que el main ocupe toda la altura de la ventana */
+  margin: 0 auto; /* Centra horizontalmente en su contenedor */
+}
+
+.sombra{
+  -webkit-box-shadow: 0px 5px 15px -3px rgba(13,9,13,0.6);
+-moz-box-shadow: 0px 5px 15px -3px rgba(13,9,13,0.6);
+box-shadow: 0px 5px 15px -3px rgba(13,9,13,0.6);
+background-color: var(--blanco);
+padding: 2rem;
+border-radius: 1rem;
+}
+.titulo{
+    text-align: center;  
+    font-size: 3.8rem;
+    color: var(--principal);
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+ .titulo span{
+    font-size: 2rem;
+  }
+  
+  .contenedor{
+    width: 120rem;
+    margin: 0 auto;
+  }
+
+  .boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+  }
+  .boton:hover{
+    cursor: pointer;
+  }
+
+  @media(min-width: 768px){
+    .boton{
+      width: auto;
+    }
+  }
+  .nav-bg{
+    background-color: var(--secundario);
+  }
+  .navegacion-principal{
+    padding: 1rem;
+  }
+  .navegacion-principal a {
+    color: var(--principal);
+    text-decoration: none;
+  }
+
+.nav-bg {
+  background-color: var(--secundario);
+  padding: 1rem 0;
+}
+
+.navegacion-principal {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.navegacion-principal a {
+  color: var(--blanco); 
+  text-decoration: none; 
+  font-size: 1.6rem;
+  margin: 0 1rem;
+  transition: color 0.3s ease; 
+}
+
+.navegacion-principal a:hover {
+  color: var(--terciario); 
+}
+
+  .navegacion-principal a {
+      margin: 0.5rem 0;
+  }
+  @media (max-width: 768px) {
+    .navegacion-principal {
+        flex-direction: column; 
+        text-align: center;
+    }
+  }
+
+  .hero {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(../img/campnou-2-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  .contenido-hero {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contenido-hero h2,
+  .contenido-hero p {
+    color: var(--blanco);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: aparecer 1s ease forwards;
+  }
+  
+  @keyframes aparecer {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (max-width: 768px) {
+    .hero {
+      height: 300px;
+    }
+  
+    .contenido-hero h2 {
+      font-size: 2.4rem;
+    }
+  
+    .contenido-hero p {
+      font-size: 1.4rem;
+    }
+  }
+  .servicios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+
+  }
+  .servicio p {
+    line-height: 1.8; /* Mejora la separación entre líneas */
+    margin-bottom: 1rem; /* Añade espacio debajo del texto */
+}
+
+  .servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--terciario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .formulario {
+    background-color: var(--blanco);
+    width: 80%; /* Cambia este porcentaje para ajustar el ancho */
+    max-width: 80rem; /* Define un límite máximo amplio */
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 30px -5px rgba(13, 9, 13, 0.6); /* Box-shadow ligeramente más amplio */
+}
+  .formulario fieldset{
+    border: none;
+  }
+  .formulario legend {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--secundario);
+    margin-bottom: 2rem;
+}
+.imagen-historia {
+  width: 100%;
+  max-width: 600px; /* Ajusta este valor al tamaño que consideres adecuado */
+  height: auto;
+  display: block;
+  margin: 20px auto; /* Para centrar la imagen en el contenedor */
+}
+
+  .campo {
+    margin-bottom: 2rem; /* Incrementa el espacio entre campos */
+}
+
+.campo label {
+  color: var(--negro);
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.input-text {
+  width: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--secundario);
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  background-color: var(--blanco);
+  transition: all 0.3s ease; /* Transición al interactuar */
+}
+  .enviar .boton{
+    width: 100%;
+  }
+  footer {
+    text-align: center;
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem;
+    font-size: 1.4rem;
+}
